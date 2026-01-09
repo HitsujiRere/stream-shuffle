@@ -12,7 +12,7 @@ export class ShuffledPermutationIterator implements IterableIterator<bigint> {
    * @param n 数列の長さ
    * @param seed シード値
    */
-  constructor(n: number | bigint, seed: number = Date.now()) {
+  constructor(n: number | bigint, seed: number | bigint = Date.now()) {
     this.n = BigInt(n);
     this.seed = BigInt(seed);
 
