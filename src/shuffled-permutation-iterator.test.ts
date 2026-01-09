@@ -4,7 +4,7 @@ import { ShuffledPermutationIterator } from "./shuffled-permutation-iterator";
 describe("ShuffledPermutationIterator", () => {
   it("0からn-1まですべて重複なく含まれているか", () => {
     const n = 100;
-    const iterator = new ShuffledPermutationIterator(n, 0);
+    const iterator = new ShuffledPermutationIterator(n);
     const permutation = Array.from(iterator);
 
     // 要素数が正しいか

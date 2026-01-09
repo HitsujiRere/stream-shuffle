@@ -6,7 +6,7 @@ const main = () => {
     const n = 100_000_000;
     const iterator = new ShuffledPermutationIterator(n);
     let count = 0;
-    console.log("ShuffledPermutationIterator");
+    console.log(`ShuffledPermutationIterator: Shuffled 0..${n - 1}`);
     for (const value of iterator) {
       console.log(`[${count}]:`, value);
       count++;
@@ -18,7 +18,9 @@ const main = () => {
     const items = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     const iterator = new ShuffledArrayPermutationIterator(items);
     let count = 0;
-    console.log("ShuffledArrayPermutationIterator");
+    console.log(
+      `ShuffledArrayPermutationIterator: Shuffled "${items.join("")}" permutations`,
+    );
     for (const permutation of iterator) {
       console.log(`[${count}]:`, permutation.join(""));
       count++;
