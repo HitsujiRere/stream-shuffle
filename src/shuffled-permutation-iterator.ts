@@ -26,7 +26,7 @@ export class ShuffledPermutationIterator implements IterableIterator<bigint> {
    * Splitmix64疑似乱数生成器
    */
   private f(val: bigint, round: number): bigint {
-    let x = (val ^ this.seed) + BigInt(round);
+    let x = (val ^ this.seed) + BigInt(round) * 0x9e3779b97f4a7c15n;
     x = (x ^ (x >> 30n)) * 0xbf58476d1ce4e5b9n;
     x = (x ^ (x >> 27n)) * 0x94d049bb133111ebn;
     return x & this.mask;
